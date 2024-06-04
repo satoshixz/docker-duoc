@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y \
     wget \
     iputils-ping
 
+# Crear el usuario nagios
+RUN useradd nagios
+
 # Descargar Nagios Core
 WORKDIR /tmp
 RUN wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
