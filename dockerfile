@@ -26,8 +26,8 @@ RUN tar xzf nagios-4.4.6.tar.gz
 
 # Compilar e instalar Nagios
 WORKDIR /tmp/nagios-4.4.6
-WORKDIR /tmp/nagios-4.4.6
 RUN ./configure --with-httpd-conf=/etc/apache2/sites-enabled && \
+	make all && \
 	make install && \
 	make install-init && \
 	make install-config && \
