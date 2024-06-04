@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
     libgd-dev \
     unzip \
     wget \
-    iputils-ping
+    iputils-ping \
+    libssl-dev
 
 # Crear el usuario nagios
 RUN useradd nagios
