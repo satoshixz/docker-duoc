@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Autor
-LABEL maintainer="tu_nombre@ejemplo.com"
+LABEL maintainer="fe.rojasg@duocuc.cl"
 
 # Actualizar el sistema e instalar dependencias
 RUN apt-get update && apt-get install -y \
@@ -23,13 +23,14 @@ RUN tar xzf nagios-4.4.6.tar.gz
 
 # Compilar e instalar Nagios
 WORKDIR /tmp/nagios-4.4.6
-RUN ./configure --with-httpd-conf=/etc/apache2/sites-enabled
-RUN make all
-RUN make install
-RUN make install-init
-RUN make install-config
-RUN make install-commandmode
-RUN make install-webconf
+WORKDIR /tmp/nagios-4.4.6
+RUN ./configure --with-httpd-conf=/etc/apache2/sites-enabled && \
+	make install && \
+	make install-init && \
+	make install-config && \
+	make install-commandmode && \
+	make install-webconf 
+
 
 # Crear usuario nagiosadmin para la interfaz web
 RUN htpasswd -b -c /usr/local/nagios/etc/htpasswd.users nagiosadmin admin
