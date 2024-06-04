@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     libssl-dev
 
-# Crear el usuario nagios
+# Crear el usuario de sistema usado por nagios
 RUN useradd nagios
 
 # Descargar Nagios Core
