@@ -21,11 +21,11 @@ RUN useradd nagios
 
 # Descargar Nagios Core
 WORKDIR /tmp
-RUN wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
-RUN tar xzf nagios-4.4.6.tar.gz
+RUN wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.5.2.tar.gz
+RUN tar xzf nagios-4.5.2.tar.gz
 
 # Compilar e instalar Nagios
-WORKDIR /tmp/nagios-4.4.6
+WORKDIR /tmp/nagios-4.5.2
 RUN ./configure --with-httpd-conf=/etc/apache2/sites-enabled && \
 	make all && \
 	make install && \
