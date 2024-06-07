@@ -24,7 +24,7 @@ Este comando iniciará un contenedor en segundo plano (-d) a partir de la imagen
 
 ## Acceso a Nagios
 
-Para acceder a la interfaz web de Nagios, abre un navegador web y ve a `localhost/nagios`. 
+Para acceder a la interfaz web de Nagios, abre un navegador web y ve a `localhost`. 
 
 Las credenciales de inicio de sesión son las siguientes:
 - Usuario: **nagiosadmin**
