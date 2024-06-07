@@ -1,6 +1,6 @@
 # Bienvenido a la imagen de Nagios 4.5.2
 
-Este Dockerfile ha sido creado por **Fernando Rojas** y está destinado a fines educativos.
+Este Dockerfile ha sido creado por **Fernando Rojas** y está destinado a fines educativos para DuocUC.
 
 ## Construcción de la imagen
 
