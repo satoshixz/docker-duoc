@@ -7,7 +7,7 @@ Este Dockerfile ha sido creado por **Fernando Rojas** y está destinado a fines 
 Para construir la imagen de Docker, navega hasta la ubicación del Dockerfile en tu terminal y ejecuta el siguiente comando:
 
 ```bash
-docker build -t nagioscore:latest .
+docker build -t nagios-frojas:latest .
 ```
 
 Este comando construirá una imagen de Docker utilizando el Dockerfile en el directorio actual y la etiquetará como 'nagioscore:latest'.
@@ -17,7 +17,7 @@ Este comando construirá una imagen de Docker utilizando el Dockerfile en el dir
 Una vez que la imagen se haya construido correctamente, puedes ejecutar un contenedor con el siguiente comando:
 
 ```bash
-docker run -p 80:80 -d nagioscore:latest
+docker run -p 80:80 -d nagios-frojas:latest
 ```
 
 Este comando iniciará un contenedor en segundo plano (-d) a partir de la imagen 'nagioscore:latest' y mapeará el puerto 80 del contenedor al puerto 80 de tu máquina host.
