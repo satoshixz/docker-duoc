@@ -1,0 +1,9 @@
+# Utiliza la imagen oficial de httpd como imagen base
+FROM httpd:latest
+
+# Copia el contenido estático al contenedor
+COPY ./public-html/ /usr/local/apache2/htdocs/
+
+# Expone el puerto 80
+EXPOSE 80
+
