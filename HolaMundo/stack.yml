@@ -1,14 +1,12 @@
-version: '3'
+version: '3.3'
+
 services:
-  web:
-    image: frojas:latest
+  tu_servicio:
+    image: frojas
     deploy:
       replicas: 3
       restart_policy:
         condition: on-failure
     ports:
       - "80:80"
-    networks:
-      - webnet
-networks:
-  webnet:
+
